@@ -20,7 +20,6 @@ public class Grafico {
 		
 		List<String> listaJson = new ArrayList<String>();
 		
-		continuar
 
 
 		for(IsegSegment isegSegment : GeradorRelatorioApplication.isegSegmentDao.findAll()) {
