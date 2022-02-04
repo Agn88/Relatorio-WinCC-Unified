@@ -1,0 +1,56 @@
+<html>
+	<meta charset="UTF-8"/>
+	<head th:replace="~{base :: head}"></head>
+	<body>
+		<div th:replace="~{base :: logo}"></div>
+	
+		<div class="container">
+			<div th:replace="~{base :: titulo('Empresas')}"></div>
+		
+			<nav class="navbar navbar-expand navbar-light bg-light d-flex justify-content-between mb-3">
+				
+				<a href="/empresas/formulario"><button class="btn btn-outline-secondary my-2 my-sm-0">Nova empresa</button></a>
+			</nav>
+		
+			<div class="card mb-3 shadow  mb-5 bg-body rounded" th:each="empresa : ${empresas}">
+							
+				<div class="card-body bg-light ">
+					<div class="row">
+						<div class="col-12 col-sm-8  mb-3">
+							
+							
+							
+							<div class="fs-4 fw-bold"  th:text="${empresa.nome}" >Nome da empresa</div>
+							
+							<div class="fw-light">
+								<span>Telefone:</span> <span th:text="${empresa.fone}"></span>
+							</div>
+														
+							<div class="fw-light"> 
+								<span>E-mail:</span> <span th:text="${empresa.email}"></span>
+							</div>
+							
+							<div class="fw-light"> 
+								<span>CNPJ:</span> <span th:text="${empresa.cnpj}"></span>
+							</div>
+							
+							<div class="fw-light">
+								<span>Descrição:</span> <span th:text="${empresa.descricao}"></span>
+							</div>
+							<div>
+								<a type="button" class="btn btn-primary mt-3" th:href="@{/empresas/edit/{id}(id=${empresa.id})}">Editar</a>
+							</div>
+							
+							
+							
+
+							
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

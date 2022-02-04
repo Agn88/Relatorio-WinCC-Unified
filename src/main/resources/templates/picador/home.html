@@ -1,0 +1,75 @@
+<html
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<meta charset="UTF-8" />
+<head th:replace="~{base :: head}"></head>
+<body>
+	<div th:replace="~{base :: logo}"></div>
+
+	<div class="container">
+		<div th:replace="~{base :: titulo('Meus Picadores')}"></div>
+
+		<nav
+			class="navbar navbar-expand navbar-light bg-light d-flex justify-content-between mb-3">
+
+			<div sec:authorize="hasAuthority('ENG_COMP')">
+				<a href="/picador/formulario">
+				<button	class="btn btn-outline-secondary my-2 my-sm-0">Novo</button></a>
+			</div>
+
+
+		</nav>
+
+
+
+
+
+		<div class="card mb-3 shadow  mb-5 bg-body rounded"
+			th:each="picador : ${picadores}">
+
+			<div class="card-body bg-light ">
+				<div class="row">
+					<div class="col-12 col-sm-8  mb-3">
+
+
+
+						<div class="fs-4 fw-bold" th:text="${picador.nome}">Nome
+							Picador</div>
+
+						<div class="fw-light">
+							<span>IP:</span> <span th:text="${picador.ip}"></span>
+						</div>
+						<div class="fw-light">
+							<span>Numero de série:</span> <span
+								th:text="${picador.numeroSerie}"></span>
+						</div>
+						<div class="fw-light">
+							<span>Data de fabricação:</span> <span
+								th:text="${picador.dataFabricacao}"></span>
+						</div>
+						<div>
+							<a type="button" class="btn btn-primary mt-3"
+								th:href="@{/usuario/picador/{id}(id=${picador.id})}">Visualizar</a>
+							<a type="button" class="btn btn-primary mt-3"
+								th:href="@{/usuario/picador/{id}/filtroalarmes(id=${picador.id})}">Histórico de alarmes</a>
+							<a type="button" class="btn btn-primary mt-3"
+								th:href="@{/usuario/picador/{id}/filtrografico(id=${picador.id})}">Histórico de Funcionamento</a>
+							<xa sec:authorize="hasAuthority('ENG_COMP')">
+								<a type="button" class="btn btn-secondary mt-3"
+									th:href="@{/picador/edit/{id}(id=${picador.id})}">Editar</a>
+								<!-- <a type="button" class="btn btn-danger  mt-3"
+									th:href="@{/picador/clearDates/{id}(id=${picador.id})}">Zerar dados coletados</a>&ensp;
+									 -->
+							</xa>
+						</div>
+						
+						
+						
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

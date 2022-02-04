@@ -1,0 +1,169 @@
+<html>
+<head th:replace="~{base :: head}">
+<meta charset="UTF-8" />
+</head>
+<body>
+	<div th:replace="~{base :: logo}"></div>
+
+	<div class="container">
+		<div th:replace="~{base :: titulo('Editar dados empresa')}"></div>
+		
+		
+		
+		
+		
+		
+		
+
+		<div class="card mt-3">
+			<form th:action="@{/empresas/update}"
+				th:object="${requisicaoNovoEmpresa}" class="card-body" method="post">
+
+				<input th:field="*{id}" class="form-control" placeholder=""
+					type="hidden" />
+					
+					
+					<div class="row">
+						<div class="col">
+							
+							<div class="form-group p-2">Nome: 
+								<input th:field="*{nome}" th:errorclass="is-invalid"
+									class="form-control" placeholder="Nome" />
+			
+								<div class="invalid-feedback" th:errors="*{nome}">Erros na
+									inserção do nome da empresa.</div>
+							</div>
+						
+						</div>
+						<div class="col">
+						
+							<div class="form-group p-2">Telefone
+								<input th:field="*{fone}" th:errorclass="is-invalid"
+									class="form-control" placeholder="Telefone" />
+			
+								<div class="invalid-feedback" th:errors="*{fone}">Erros na
+									inserção do telefone.</div>
+							</div>
+						
+						</div>
+					</div>
+					
+					
+					<div class="row">
+						<div class="col">
+						
+							<div class="form-group p-2">E-mail:
+
+								<input th:field="*{email}" th:errorclass="is-invalid"
+									class="form-control" placeholder="E-mail" />
+			
+								<div class="invalid-feedback" th:errors="*{email}">Erros na
+									inserção do e-mail da empresa.</div>
+							</div>
+						
+						</div>
+						<div class="col">
+						
+							<div class="form-group p-2">CNPJ:
+
+								<input th:field="*{cnpj}" th:errorclass="is-invalid"
+									class="form-control" placeholder="CNPJ" />
+			
+								<div class="invalid-feedback" th:errors="*{cnpj}">Erros na
+									inserção do CNPJ</div>
+							</div>
+						
+						</div>
+					</div>
+					
+					
+					<div class="row">
+						<div class="col">
+						
+							<div class="form-group p-2">Cidade:
+
+								<input th:field="*{cidade}" th:errorclass="is-invalid"
+									class="form-control" placeholder="Cidade" />
+			
+								<div class="invalid-feedback" th:errors="*{cidade}">Erros no
+									cadastro da cidade do Picador.</div>
+							</div>
+						
+						</div>
+						<div class="col">
+						
+							<div class="form-group p-2">Estado:
+
+								<input th:field="*{estado}" th:errorclass="is-invalid"
+									class="form-control" placeholder="Estado" />
+			
+								<div class="invalid-feedback" th:errors="*{estado}">Erros no
+									cadastro do estado do Picador.</div>
+							</div>
+						
+						</div>
+					</div>
+					
+					
+					<div class="row">
+						<div class="col">
+						
+							<div class="form-group p-2">Pais:
+
+								<input th:field="*{pais}" th:errorclass="is-invalid"
+									class="form-control" placeholder="Pais" />
+			
+								<div class="invalid-feedback" th:errors="*{pais}">Erros no
+									cadastro do pais do Picador.</div>
+							</div>
+						
+						</div>
+						<div class="col">
+						
+							<div class="form-group p-2">CEP:
+
+								<input th:field="*{cep}" th:errorclass="is-invalid"
+									class="form-control" placeholder="CEP" />
+			
+								<div class="invalid-feedback" th:errors="*{cep}">Erros no
+									cadastro do cep do Picador.</div>
+							</div>
+						
+						
+						</div>
+					</div>
+					
+					
+					<div class="row">
+						<div class="col">
+						
+							<div class="form-group p-2">Detalhes:
+								<textarea th:field="*{descricao}" class="form-control"
+									placeholder="Detalhes sobre a empresa"></textarea>
+									
+						</div>
+						
+						
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col">
+						
+							<button class="btn btn-primary" type="submit">Salvar</button>
+						
+						</div>
+						
+					</div>
+					
+					
+					
+
+				
+
+				
+			</form>
+		</div>
+	</div>
+</body>
+</html>

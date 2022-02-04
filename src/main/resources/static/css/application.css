@@ -1,0 +1,125 @@
+@charset "ISO-8859-1";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#chartdiv {
+  width: 100%;
+  height: 422px;
+}
+
+#chartdiv2 {
+  width: 100%;
+  height: 422px;
+}
+
+
+.amcharts-amexport-item {
+  border: 2px solid #777;
+}
+
+.amcharts-amexport-top .amcharts-amexport-item > .amcharts-amexport-menu {
+  top: -3px!important;
+  left: 2px
+}
+
+.amcharts-export-menu-top-right {
+	top: 0px;
+	right: 0;
+}
+
+#figuraPicador {
+	width: 500px;
+	height: 200px;
+	background-image: url("/img/emergpicador.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.animacaoSensor {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	
+	margin: 0px;
+}
+
+.animacaoSensorVermelha {
+	background-color: red;
+}
+
+.animacaoSensorVerde {
+	background-color: green;
+}
+	
+
+#sensor01 {
+	position:relative;
+	top: 40px;
+	left: -65px;
+}
+
+#sensor02 {
+	position:relative;
+	top: 16px;
+	left: -18px;
+}
+
+#sensor03 {
+	position:relative;
+	top: 17px;
+	left: -18px;
+}
+
+#sensor04 {
+	position:relative;
+	top: 87px;
+	left: -19px;
+}
+
+#sensor05 {
+	position:relative;
+	top: 130px;
+	left: -65px;
+}
+
+#sensor06 {
+	position:relative;
+	top: 118px;
+	left: 23px;
+}
+
+#sensor07 {
+	position:relative;
+	top: 120px;
+	left: 23px;
+}
+
+#sensor08 {
+	position:relative;
+	top: 116px;
+	left: 129px;
+}
+
+#sensor09 {
+	position:relative;
+	top: 91px;
+	left: 151px;
+}
+
+#sensor10 {
+	position:relative;
+	top: -42px;
+	left: 151px;
+}
+
+
+
+
+
+
+
+
+

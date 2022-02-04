@@ -1,0 +1,153 @@
+<html>
+<meta charset="UTF-8" />
+
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script
+	src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet"
+	href="https://www.amcharts.com/lib/3/plugins/export/export.css"
+	type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+<head th:replace="~{base :: head}"></head>
+<meta http-equiv="refresh" content="1">
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+		<br> <br> <br>
+
+
+
+
+
+
+
+
+
+			
+						
+						<br> 
+							
+						<div align="center" style="top:0px; margin: 0px;"  th:fragment="emerg">
+						
+							<div id="figuraPicador">
+
+
+								<div th:with="expr_result = ${emergencias[0]}">
+									<div th:if="${expr_result}">
+										<p id="sensor01" class="animacaoSensor animacaoSensorVerde"></p>
+									</div>
+									<div th:unless="${expr_result}">
+										<p id="sensor01" class="animacaoSensor animacaoSensorVermelha"></p>
+									</div>
+								</div>
+								
+								<div th:with="expr_result = ${emergencias[1]}">
+									<div th:if="${expr_result}">
+										<p id="sensor02" class="animacaoSensor animacaoSensorVerde"></p>
+									</div>
+									<div th:unless="${expr_result}">
+										<p id="sensor02" class="animacaoSensor animacaoSensorVermelha"></p>
+									</div>
+								</div>
+								
+								<div th:with="expr_result = ${emergencias[2]}">
+									<div th:if="${expr_result}">
+										<p id="sensor03" class="animacaoSensor animacaoSensorVerde"></p>
+									</div>
+									<div th:unless="${expr_result}">
+										<p id="sensor03" class="animacaoSensor animacaoSensorVermelha"></p>
+									</div>
+								</div>
+								
+								<div th:with="expr_result = ${emergencias[3]}">
+									<div th:if="${expr_result}">
+										<p id="sensor04" class="animacaoSensor animacaoSensorVerde"></p>
+									</div>
+									<div th:unless="${expr_result}">
+										<p id="sensor04" class="animacaoSensor animacaoSensorVermelha"></p>
+									</div>
+								</div>
+								
+								<div th:with="expr_result = ${emergencias[4]}">
+									<div th:if="${expr_result}">
+										<p id="sensor05" class="animacaoSensor animacaoSensorVerde"></p>
+									</div>
+									<div th:unless="${expr_result}">
+										<p id="sensor05" class="animacaoSensor animacaoSensorVermelha"></p>
+									</div>
+								</div>
+								
+								<div th:with="expr_result = ${emergencias[5]}">
+									<div th:if="${expr_result}">
+										<p id="sensor06" class="animacaoSensor animacaoSensorVerde"></p>
+									</div>
+									<div th:unless="${expr_result}">
+										<p id="sensor06" class="animacaoSensor animacaoSensorVermelha"></p>
+									</div>
+								</div>
+								
+								<div th:with="expr_result = ${emergencias[6]}">
+									<div th:if="${expr_result}">
+										<p id="sensor07" class="animacaoSensor animacaoSensorVerde"></p>
+									</div>
+									<div th:unless="${expr_result}">
+										<p id="sensor07" class="animacaoSensor animacaoSensorVermelha"></p>
+									</div>
+								</div>
+								
+								<div th:with="expr_result = ${emergencias[7]}">
+									<div th:if="${expr_result}">
+										<p id="sensor08" class="animacaoSensor animacaoSensorVerde"></p>
+									</div>
+									<div th:unless="${expr_result}">
+										<p id="sensor08" class="animacaoSensor animacaoSensorVermelha"></p>
+									</div>
+								</div>
+								
+								<div th:with="expr_result = ${emergencias[8]}">
+									<div th:if="${expr_result}">
+										<p id="sensor09" class="animacaoSensor animacaoSensorVerde"></p>
+									</div>
+									<div th:unless="${expr_result}">
+										<p id="sensor09" class="animacaoSensor animacaoSensorVermelha"></p>
+									</div>
+								</div>
+								
+								<div th:with="expr_result = ${emergencias[9]}">
+									<div th:if="${expr_result}">
+										<p id="sensor10" class="animacaoSensor animacaoSensorVerde"></p>
+									</div>
+									<div th:unless="${expr_result}">
+										<p id="sensor10" class="animacaoSensor animacaoSensorVermelha"></p>
+									</div>
+								</div>
+								
+								<div th:with="expr_result = ${emergencias[10]}">
+									<div th:if="${expr_result}">
+										<p id="sensor11" class="animacaoSensor animacaoSensorVerde"></p>
+									</div>
+									<div th:unless="${expr_result}">
+										<p id="sensor11" class="animacaoSensor animacaoSensorVermelha"></p>
+									</div>
+								</div>
+								
+
+							
+							</div>
+						</div>
+				
+			
+</body>
+</html>

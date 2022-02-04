@@ -1,0 +1,75 @@
+<html>
+<meta charset="UTF-8" />
+<head th:replace="~{base :: head}"></head>
+<body>
+	<div th:replace="~{base :: logo}"></div>
+
+	<div class="container">
+		<div th:replace="~{base :: titulo('Usuários')}"></div>
+
+		<nav
+			class="navbar navbar-expand navbar-light bg-light d-flex justify-content-between mb-3">
+
+			<a href="/usuario/formulario"><button
+					class="btn btn-outline-secondary my-2 my-sm-0">Novo
+					usuário</button></a>
+		</nav>
+
+		<div class="card mb-3 shadow  mb-5 bg-body rounded"
+			th:each="user : ${users}">
+
+			<div class="card-body bg-light ">
+				<div class="row">
+					<div class="col-12 col-sm-8  mb-3">
+
+						<div class="fs-4 fw-bold" th:text="${user.nome}">Id usuário</div>
+
+						<div th:each="role : ${user.roles} ">
+							<div class="fs-6 fw-bold"
+								th:text="'Permissão/grupo: ' + ${role.roleName}">Id
+								usuário</div>
+						</div>
+
+						<div class="fw-light">
+							<span>ID:</span> <span th:text="${user.id}"></span>
+						</div>
+						<div class="fw-light">
+							<span>Username:</span> <span th:text="${user.username}"></span>
+						</div>
+						<div class="fw-light">
+							<span>E-mail:</span> <span th:text="${user.email}"></span>
+						</div>
+						<div class="fw-light">
+							<span>Fone:</span> <span th:text="${user.fone}"></span>
+						</div>
+						<div class="fw-light">
+							<p
+								th:text="${'Local: ' + user.cidade + ' - ' + user.estado + ' - ' + user.pais + ' - ' + user.cep}">Endereco</p>
+						</div>
+						<div class="d-flex flex-row bd-highlight mb-3">
+							<a type="button" class="btn btn-primary mt-0"
+								th:href="@{/usuario/edit/{id}(id=${user.id})}">Editar</a>&ensp;
+
+							<div th:if="${user.disabled}">
+								<a type="button" class="btn btn-success"
+									th:href="@{/usuario/afterEnable/{id}(id=${user.id})}">Habilitar</a>&ensp;
+							</div>
+							<div th:unless="${user.disabled}">
+								<a type="button" class="btn btn-danger"
+									th:href="@{/usuario/afterEnable/{id}(id=${user.id})}">Desabilitar</a>&ensp;
+							</div>
+
+
+
+
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
